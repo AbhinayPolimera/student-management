@@ -1,0 +1,15 @@
+.modal .MuiDialogContent-root {
+  padding: 20px;
+}
+
+.text-field {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.select-field {
+  margin-top: 10px;
+}
