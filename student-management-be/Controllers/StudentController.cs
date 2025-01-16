@@ -15,7 +15,13 @@ namespace StudentManagement.Controllers
         private static List<Student> students = new List<Student>
     {
         new Student { Id = 1, FirstName = "Abinay", LastName = "Polimera", School = "UMKC", Major = "Computer Science", IsActive = true },
-        new Student { Id = 2, FirstName = "Jane", LastName = "Smith", School = "St Louis University", Major = "Science", IsActive = false }
+        new Student { Id = 2, FirstName = "Jane", LastName = "Smith", School = "St Louis University", Major = "Science", IsActive = false },
+        new Student { Id = 3, FirstName = "John", LastName = "Doe", School = "UMKC", Major = "Computer Science", IsActive = true },
+        new Student { Id = 4, FirstName = "Clara", LastName = "Elaine", School = "St Louis University", Major = "Science", IsActive = false },
+        new Student { Id = 5, FirstName = "Beth", LastName = "Ferry", School = "UCM", Major = "Computer Science", IsActive = true },
+        new Student { Id = 6, FirstName = "Nick", LastName = "Jonas", School = "Maryville University", Major = "Science", IsActive = false },
+        new Student { Id = 7, FirstName = "Priyanka", LastName = "Chopra", School = "Webster University", Major = "Computer Science", IsActive = true },
+        new Student { Id = 8, FirstName = "Aishwarya", LastName = "Rai", School = "UCM", Major = "Science", IsActive = false }
     };
 
         [HttpGet]

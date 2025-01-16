@@ -1,0 +1,38 @@
+@page
+@model StudentManagement.Pages.Students.AddSchoolModel
+@{
+    ViewData["Title"] = "Add School";
+}
+
+<h1>Add School</h1>
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <div class="form-group">
+        <label for="name">School Name</label>
+        <input type="text" class="form-control" id="name" name="School.Name" value="@Model.School?.Name" required />
+    </div>
+    <div class="form-group">
+        <label for="address1">Address 1</label>
+        <input type="text" class="form-control" id="address1" name="School.Address1" value="@Model.School?.Address1" />
+    </div>
+    <div class="form-group">
+        <label for="address2">Address 2</label>
+        <input type="text" class="form-control" id="address2" name="School.Address2" value="@Model.School?.Address2" />
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" name="School.City" value="@Model.School?.City" required />
+    </div>
+    <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" class="form-control" id="state" name="School.State" value="@Model.School?.State" required />
+    </div>
+    <div class="form-group">
+        <label for="zipCode">Zip Code</label>
+        <input type="text" class="form-control" id="zipCode" name="School.ZipCode" value="@Model.School?.ZipCode" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add School</button>
+</form>

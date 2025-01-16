@@ -1,0 +1,47 @@
+@page "Edit/{id}"
+@model StudentManagement.Pages.Students.EditModel
+@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<h1>Edit Student</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" value="@Model.Student.FirstName" required />
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" value="@Model.Student.LastName" required />
+    </div>
+    <div class="form-group">
+        <label for="school">School</label>
+        <input type="text" class="form-control" id="school" name="school" value="@Model.Student.School" required />
+    </div>
+    <div class="form-group">
+        <label for="major">Major</label>
+        <input type="text" class="form-control" id="major" name="major" value="@Model.Student.Major" required />
+    </div>
+    <div class="form-group">
+        <label for="active">Active</label>
+        <input type="checkbox" id="active" name="isActive" value="true" @(Model.Student.IsActive ? "checked" : "") />
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch(`/api/Students/@Model.Student.Id`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('firstName').value = data.firstName;
+                    document.getElementById('lastName').value = data.lastName;
+                    document.getElementById('school').value = data.school;
+                    document.getElementById('major').value = data.major;
+                    document.getElementById('active').checked = data.isActive;
+                });
+        });
+    </script>
+}
