@@ -10,8 +10,6 @@
 
 * Swagger UI is available on application startup.
 
-* student-management-fe is the frontend application integrated with React and Material UI.
+* student-management-frontend is the frontend application built with Razor pages.
 
-* Run the following command to install dependencies ```npm i```
-
-* Run ```npm start``` to start the application.
+* Run the ```dotnet run``` to start the application and access the UI at https://localhost:5041/Students
